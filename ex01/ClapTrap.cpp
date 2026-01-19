@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 10:52:03 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/19 16:06:45 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/19 17:28:48 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ ClapTrap::ClapTrap(void) : _name("unnamed"), _hp(10), _energy(10), _damage(0)
 	std::cout << "An unnamed ClapTrap was created." << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string& name) : _name(name), _hp(10), _energy(10), _damage(0)
+ClapTrap::ClapTrap(const std::string& name) : _name(name), _hp(10), _energy(0), _damage(0)
 {
 	std::cout << "ClapTrap " << _name << " was created." << std::endl;
 }
@@ -29,7 +29,7 @@ ClapTrap::ClapTrap(const ClapTrap& ct)
 	this->_hp = ct.getHP();
 	this->_energy = ct.getEnergy();
 	this->_damage = ct.getDamage();
-	std::cout << "Copy constructor of " << _name << "." << std::endl;
+	std::cout << "(ct) Copy constructor of " << _name << "." << std::endl;
 }
 
 ClapTrap::~ClapTrap(void)
@@ -46,7 +46,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& ct)
 		this->_energy = ct.getEnergy();
 		this->_damage = ct.getDamage();
 	}
-	std::cout << "Copy assignement operator of " << _name << "." << std::endl;
+	std::cout << "(ct) Copy assignement operator of " << _name << "." << std::endl;
 	return (*this);
 }
 
