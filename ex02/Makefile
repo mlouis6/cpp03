@@ -6,16 +6,16 @@
 #    By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/10 10:50:25 by mlouis            #+#    #+#              #
-#    Updated: 2026/01/20 11:29:27 by mlouis           ###   ########.fr        #
+#    Updated: 2026/01/20 11:41:28 by mlouis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY = all clean fclean re
 
-NAME := clap.out
+NAME := scav.out
 
-SRCS := ClapTrap.cpp main.cpp
-INCS := ClapTrap.hpp
+SRCS := ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp
+INCS := ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 OBJS := $(SRCS:%.cpp=%.o)
 DEPS := $(OBJS:.o=.d)
 
@@ -26,7 +26,7 @@ MAKEFLAGS += --no-print-directory
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(INCS)
+$(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $@
 
 %.o: %.cpp
