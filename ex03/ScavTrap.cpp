@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:12:49 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/20 15:46:57 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/20 15:46:36 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 ScavTrap::ScavTrap(void)
 {
 	_name = "unnamed";
-	_hp = 100;
-	_energy = 50;
-	_damage = 20;
+	_hp = ST_HP;
+	_energy = ST_ENERGY;
+	_damage = ST_DAMAGE;
 	std::cout << "An unnamed ScavTrap was created." << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string& name)
 {
 	_name = name;
-	_hp = 100;
-	_energy = 50;
-	_damage = 20;
+	_hp = ST_HP;
+	_energy = ST_ENERGY;
+	_damage = ST_DAMAGE;
 	std::cout << "ScavTrap " << _name << " was created." << std::endl;
 }
 
@@ -81,11 +81,6 @@ void	ScavTrap::guardGate(void)
 	if (_hp == 0)
 	{
 		std::cout << "ScavTrap " << _name << " is dead so it can't guard the gate." << std::endl;
-		return ;
-	}
-	if (_energy == 0)
-	{
-		std::cout << "ScavTrap " << _name << " had no energy to guard the gate." << std::endl;
 		return ;
 	}
 	std::cout << "ScavTrap " << this->getName() << " is now the Gate keeper." << std::endl;

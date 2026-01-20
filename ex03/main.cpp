@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 10:11:38 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/20 12:22:02 by mlouis           ###   ########.fr       */
+/*   Created: 2026/01/19 15:25:48 by mlouis            #+#    #+#             */
+/*   Updated: 2026/01/20 15:45:53 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
-
 #include "ClapTrap.hpp"
-# include <string>
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
+#include <iostream>
 
-class FragTrap : public ClapTrap
+int	main(void)
 {
-	public:
-		FragTrap(void);
-		FragTrap(const std::string& name);
-		FragTrap(const FragTrap& cpy);
-		FragTrap&	operator=(const FragTrap& cpy);
-		~FragTrap(void);
-
-		void	highFivesGuys(void);
-	private:
-};
-
-#endif
+	{
+		ClapTrap ct("Bobby");
+		ct.attack("Bad Guy");
+	}
+	std::cout << std::endl;
+	{
+		ScavTrap st("Bot");
+		st.attack("Bad Guy");
+	}
+	std::cout << std::endl;
+	{
+		FragTrap ft("Boom");
+		ft.attack("Bad Guy");
+	}
+	std::cout << std::endl;
+	{
+		DiamondTrap dt("Rihanna");
+		dt.attack("Bad Guy");
+	}
+	return (0);
+}

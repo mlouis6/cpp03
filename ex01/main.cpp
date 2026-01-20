@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 15:25:48 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/19 19:28:45 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/20 12:32:39 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ int	main(void)
 	std::cout << st;
 	st.beRepaired(10);
 	st.guardGate();
-	return (0);
 
 	return (0);
 }

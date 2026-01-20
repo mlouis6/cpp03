@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 10:11:46 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/20 15:46:52 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/20 15:46:40 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@
 FragTrap::FragTrap(void)
 {
 	_name = "unnamed";
-	_hp = 100;
-	_energy = 100;
-	_damage = 30;
+	_hp = FT_HP;
+	_energy = FT_ENERGY;
+	_damage = FT_DAMAGE;
 	std::cout << "An unnamed FragTrap was created." << std::endl;
 }
 
 FragTrap::FragTrap(const std::string& name)
 {
 	_name = name;
-	_hp = 100;
-	_energy = 100;
-	_damage = 30;
+	_hp = FT_HP;
+	_energy = FT_ENERGY;
+	_damage = FT_DAMAGE;
 	std::cout << "FragTrap " << _name << " was created." << std::endl;
 }
 
@@ -63,11 +63,6 @@ void	FragTrap::highFivesGuys(void)
 	if (_hp == 0)
 	{
 		std::cout << "FragTrap " << _name << " is dead so it can't high five." << std::endl;
-		return ;
-	}
-	if (_energy == 0)
-	{
-		std::cout << "FragTrap " << _name << " had no energy to guard high five." << std::endl;
 		return ;
 	}
 	std::cout << "FragTrap wants to high five!" << std::endl;
