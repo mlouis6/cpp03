@@ -6,11 +6,11 @@
 #    By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/10 10:50:25 by mlouis            #+#    #+#              #
-#    Updated: 2026/01/20 15:40:39 by mlouis           ###   ########.fr        #
+#    Updated: 2026/01/26 14:13:20 by mlouis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-.PHONY = all clean fclean re
+.PHONY: all clean fclean re
 
 NAME := diamond.out
 
