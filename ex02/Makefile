@@ -15,7 +15,7 @@
 NAME := frag.out
 
 SRCS := ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp
-INCS := ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
+INCS := .
 OBJS := $(SRCS:%.cpp=%.o)
 DEPS := $(OBJS:.o=.d)
 

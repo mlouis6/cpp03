@@ -16,10 +16,6 @@
 # include "ClapTrap.hpp"
 # include <string>
 
-# define FT_HP 100
-# define FT_ENERGY 100
-# define FT_DAMAGE 30
-
 class FragTrap : virtual public ClapTrap
 {
 	public:
@@ -30,7 +26,10 @@ class FragTrap : virtual public ClapTrap
 		~FragTrap(void);
 
 		void	highFivesGuys(void);
-	private:
+	protected:
+		static const unsigned int	_base_hp;
+		static const unsigned int	_base_energy;
+		static const unsigned int	_base_damage;
 };
 
 #endif

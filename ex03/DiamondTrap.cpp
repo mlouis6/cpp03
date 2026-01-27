@@ -15,33 +15,26 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 #include <string>
+#include <iostream>
 
-DiamondTrap::DiamondTrap(void)
+DiamondTrap::DiamondTrap(void) : ClapTrap("unnamed_clap_name"), ScavTrap(), FragTrap(), _name("unnamed")
 {
-	_name = "unnamed";
-	ClapTrap::_name = _name + "_clap_name";
-	_hp = FT_HP;
-	_energy = ST_ENERGY;
-	_damage = FT_DAMAGE;
+	_hp = FragTrap::_base_hp;
+	_energy = ScavTrap::_base_energy;
+	_damage = FragTrap::_base_damage;
 	std::cout << "An unnamed DiamondTrap was created." << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const std::string& name)
+DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name"), ScavTrap(), FragTrap(), _name(name)
 {
-	_name = name;
-	ClapTrap::_name = _name + "_clap_name";
-	_hp = FragTrap::getHP(); // FT_HP;
-	_energy = ScavTrap::_energy; // ST_ENERGY;
-	_damage = FragTrap::getDamage(); // FT_DAMAGE;
+	_hp = FragTrap::_base_hp;
+	_energy = ScavTrap::_base_energy;
+	_damage = FragTrap::_base_damage;
 	std::cout << "DiamondTrap " << _name << " (" << ClapTrap::_name << ") was created." << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap& cpy)
+DiamondTrap::DiamondTrap(const DiamondTrap& cpy) : ClapTrap(cpy), ScavTrap(cpy), FragTrap(cpy), _name(cpy._name)
 {
-	this->_name = cpy.getName();
-	this->_hp = cpy.getHP();
-	this->_energy = cpy.getEnergy();
-	this->_damage = cpy.getDamage();
 	std::cout << "(dt) Copy constructor of " << _name << "." << std::endl;
 }
 
@@ -49,10 +42,8 @@ DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& cpy)
 {
 	if (this != &cpy)
 	{
-		this->_name = cpy.getName();
-		this->_hp = cpy.getHP();
-		this->_energy = cpy.getEnergy();
-		this->_damage = cpy.getDamage();
+		ClapTrap::operator=(cpy);
+		_name = cpy._name;
 	}
 	std::cout << "(dt) Copy assignement operator of " << _name << "." << std::endl;
 	return (*this);

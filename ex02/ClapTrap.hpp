@@ -22,7 +22,7 @@ class ClapTrap
 		ClapTrap(void);
 		ClapTrap(const std::string& name);
 		ClapTrap(const ClapTrap& ct);
-		~ClapTrap(void);
+		virtual ~ClapTrap(void);
 		ClapTrap& operator=(const ClapTrap& ct);
 
 		//* GETTERS / SETTERS
@@ -36,7 +36,7 @@ class ClapTrap
 		void			setDamage(const unsigned int damage);
 
 		//* ACTIONS
-		void	attack(const std::string& target);
+		virtual void	attack(const std::string& target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
 

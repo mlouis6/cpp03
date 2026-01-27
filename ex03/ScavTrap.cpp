@@ -11,31 +11,30 @@
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include <iostream>
 
-ScavTrap::ScavTrap(void)
+const unsigned int	ScavTrap::_base_hp = 100;
+const unsigned int	ScavTrap::_base_energy = 50;
+const unsigned int	ScavTrap::_base_damage = 20;
+
+ScavTrap::ScavTrap(void) : ClapTrap()
 {
-	_name = "unnamed";
-	_hp = ST_HP;
-	_energy = ST_ENERGY;
-	_damage = ST_DAMAGE;
+	_hp = _base_hp;
+	_energy = _base_energy;
+	_damage = _base_damage;
 	std::cout << "An unnamed ScavTrap was created." << std::endl;
 }
 
-ScavTrap::ScavTrap(const std::string& name)
+ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 {
-	_name = name;
-	_hp = ST_HP;
-	_energy = ST_ENERGY;
-	_damage = ST_DAMAGE;
-	std::cout << "ScavTrap " << _name << " was created." << std::endl;
+	_hp = _base_hp;
+	_energy = _base_energy;
+	_damage = _base_damage;
+	std::cout << "ScavTrap " << name << " was created." << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& st)
+ScavTrap::ScavTrap(const ScavTrap& st) : ClapTrap(st)
 {
-	this->setName(st.getName());
-	this->setHP(st.getHP());
-	this->setEnergy(st.getEnergy());
-	this->setDamage(st.getDamage());
 	std::cout << "(st) Copy constructor of " << this->getName() << "." << std::endl;
 }
 
@@ -43,10 +42,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& st)
 {
 	if (this != &st)
 	{
-		this->setName(st.getName());
-		this->setHP(st.getHP());
-		this->setEnergy(st.getEnergy());
-		this->setDamage(st.getDamage());
+		ClapTrap::operator=(st);
 	}
 	std::cout << "(st) Copy assignement operator of " << this->getName() << "." << std::endl;
 	return (*this);

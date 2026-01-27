@@ -15,10 +15,6 @@
 
 # include "ClapTrap.hpp"
 
-# define ST_HP 100
-# define ST_ENERGY 50
-# define ST_DAMAGE 20
-
 class ScavTrap : virtual public ClapTrap
 {
 	public:
@@ -30,8 +26,10 @@ class ScavTrap : virtual public ClapTrap
 
 		void	attack(const std::string& target);
 		void	guardGate(void);
-	private:
-
+	protected:
+		static const unsigned int	_base_hp;
+		static const unsigned int	_base_energy;
+		static const unsigned int	_base_damage;
 };
 
 #endif

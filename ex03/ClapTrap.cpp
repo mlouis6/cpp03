@@ -149,6 +149,6 @@ void	ClapTrap::beRepaired(unsigned int amount)
 std::ostream& operator<<(std::ostream& os, const ClapTrap& ct)
 {
 	os << "------\nName: " << ct.getName() << "\nHP: " << ct.getHP() << "\nEnergy: " << ct.getEnergy()\
-		<< "\nDamage: " << ct.getDamage() << "\n------\n\n";
+		<< "\nDamage: " << ct.getDamage() << "\n------\n";
 	return (os);
 }

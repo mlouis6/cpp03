@@ -15,7 +15,7 @@
 NAME := diamond.out
 
 SRCS := ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp main.cpp
-INCS := ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
+INCS := .
 OBJS := $(SRCS:%.cpp=%.o)
 DEPS := $(OBJS:.o=.d)
 

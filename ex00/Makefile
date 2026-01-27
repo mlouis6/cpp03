@@ -15,7 +15,7 @@
 NAME := clap.out
 
 SRCS := ClapTrap.cpp main.cpp
-INCS := ClapTrap.hpp
+INCS := .
 OBJS := $(SRCS:%.cpp=%.o)
 DEPS := $(OBJS:.o=.d)
 

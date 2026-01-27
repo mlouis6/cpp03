@@ -15,7 +15,7 @@
 NAME := scav.out
 
 SRCS := ClapTrap.cpp ScavTrap.cpp main.cpp
-INCS := ClapTrap.hpp ScavTrap.hpp
+INCS := .
 OBJS := $(SRCS:%.cpp=%.o)
 DEPS := $(OBJS:.o=.d)
 

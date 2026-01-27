@@ -14,7 +14,7 @@
 # define CLAPTRAP_HPP
 
 # include <string>
-# include <iostream>
+# include <iosfwd>
 
 class ClapTrap
 {

@@ -13,43 +13,34 @@
 #include "FragTrap.hpp"
 #include <iostream>
 
-FragTrap::FragTrap(void)
+FragTrap::FragTrap(void) : ClapTrap()
 {
-	_name = "unnamed";
 	_hp = 100;
 	_energy = 100;
 	_damage = 30;
 	std::cout << "An unnamed FragTrap was created." << std::endl;
 }
 
-FragTrap::FragTrap(const std::string& name)
+FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
 {
-	_name = name;
 	_hp = 100;
 	_energy = 100;
 	_damage = 30;
 	std::cout << "FragTrap " << _name << " was created." << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap& cpy)
+FragTrap::FragTrap(const FragTrap& cpy) : ClapTrap(cpy)
 {
-	_name = cpy.getName();
-	_hp = cpy.getHP();
-	_energy = cpy.getEnergy();
-	_damage = cpy.getDamage();
-	std::cout << "(ft) Copy constructor of " << this->getName() << "." << std::endl;
+	std::cout << "(ft) Copy constructor of " << _name << "." << std::endl;
 }
 
 FragTrap&	FragTrap::operator=(const FragTrap& cpy)
 {
 	if (this != &cpy)
 	{
-		_name = cpy.getName();
-		_hp = cpy.getHP();
-		_energy = cpy.getEnergy();
-		_damage = cpy.getDamage();
+		ClapTrap::operator=(cpy);
 	}
-	std::cout << "(ft) Copy assignement operator of " << this->getName() << "." << std::endl;
+	std::cout << "(ft) Copy assignement operator of " << _name << "." << std::endl;
 	return (*this);
 }
 

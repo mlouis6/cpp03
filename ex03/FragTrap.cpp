@@ -13,30 +13,28 @@
 #include "FragTrap.hpp"
 #include <iostream>
 
-FragTrap::FragTrap(void)
+const unsigned int	FragTrap::_base_hp = 100;
+const unsigned int	FragTrap::_base_energy = 100;
+const unsigned int	FragTrap::_base_damage = 30;
+
+FragTrap::FragTrap(void) : ClapTrap()
 {
-	_name = "unnamed";
-	_hp = FT_HP;
-	_energy = FT_ENERGY;
-	_damage = FT_DAMAGE;
+	_hp = _base_hp;
+	_energy = _base_energy;
+	_damage = _base_damage;
 	std::cout << "An unnamed FragTrap was created." << std::endl;
 }
 
-FragTrap::FragTrap(const std::string& name)
+FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
 {
-	_name = name;
-	_hp = FT_HP;
-	_energy = FT_ENERGY;
-	_damage = FT_DAMAGE;
-	std::cout << "FragTrap " << _name << " was created." << std::endl;
+	_hp = _base_hp;
+	_energy = _base_energy;
+	_damage = _base_damage;
+	std::cout << "FragTrap " << name << " was created." << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap& cpy)
+FragTrap::FragTrap(const FragTrap& cpy) : ClapTrap(cpy)
 {
-	_name = cpy.getName();
-	_hp = cpy.getHP();
-	_energy = cpy.getEnergy();
-	_damage = cpy.getDamage();
 	std::cout << "(ft) Copy constructor of " << this->getName() << "." << std::endl;
 }
 
@@ -44,10 +42,7 @@ FragTrap&	FragTrap::operator=(const FragTrap& cpy)
 {
 	if (this != &cpy)
 	{
-		_name = cpy.getName();
-		_hp = cpy.getHP();
-		_energy = cpy.getEnergy();
-		_damage = cpy.getDamage();
+		ClapTrap::operator=(cpy);
 	}
 	std::cout << "(ft) Copy assignement operator of " << this->getName() << "." << std::endl;
 	return (*this);

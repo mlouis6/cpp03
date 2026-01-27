@@ -21,16 +21,19 @@ int	main(void)
 	{
 		ClapTrap ct("Bobby");
 		ct.attack("Bad Guy");
+		std::cout << ct;
 	}
 	std::cout << std::endl;
 	{
 		ScavTrap st("Bot");
 		st.attack("Bad Guy");
+		std::cout << st;
 	}
 	std::cout << std::endl;
 	{
 		FragTrap ft("Boom");
 		ft.attack("Bad Guy");
+		std::cout << ft;
 	}
 	std::cout << std::endl;
 	{
