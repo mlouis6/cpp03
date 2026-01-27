@@ -23,9 +23,10 @@ class FragTrap : virtual public ClapTrap
 		FragTrap(const std::string& name);
 		FragTrap(const FragTrap& cpy);
 		FragTrap&	operator=(const FragTrap& cpy);
-		~FragTrap(void);
+		~FragTrap(void) override;
 
 		void	highFivesGuys(void);
+
 	protected:
 		static const unsigned int	_base_hp;
 		static const unsigned int	_base_energy;

@@ -23,9 +23,10 @@ class DiamondTrap : public ScavTrap, public FragTrap
 		DiamondTrap(const std::string& name);
 		DiamondTrap(const DiamondTrap& cpy);
 		DiamondTrap&	operator=(const DiamondTrap& cpy);
-		~DiamondTrap(void);
+		~DiamondTrap(void) override;
 
 		void	whoAmI(void);
+
 	private:
 		std::string	_name;
 };
