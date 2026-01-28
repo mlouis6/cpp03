@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 10:11:38 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/20 14:57:08 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/28 10:11:35 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class FragTrap : virtual public ClapTrap
 		FragTrap(const std::string& name);
 		FragTrap(const FragTrap& cpy);
 		FragTrap&	operator=(const FragTrap& cpy);
-		~FragTrap(void) override;
+		~FragTrap(void);
 
 		void	highFivesGuys(void);
 

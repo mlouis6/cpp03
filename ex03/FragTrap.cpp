@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 10:11:46 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/20 15:46:40 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/28 10:11:47 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 const unsigned int	FragTrap::_base_hp = 100;
 const unsigned int	FragTrap::_base_energy = 100;
 const unsigned int	FragTrap::_base_damage = 30;
+
 
 FragTrap::FragTrap(void) : ClapTrap()
 {

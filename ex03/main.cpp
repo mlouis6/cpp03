@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 15:25:48 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/26 16:32:27 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/28 09:49:05 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ int	main(void)
 		std::cout << dt;
 		dt.attack("Bad Guy");
 		std::cout << dt;
+		dt.highFivesGuys();
+		dt.guardGate();
 		dt.whoAmI();
 	}
 	return (0);

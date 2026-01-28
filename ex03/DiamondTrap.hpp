@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 12:51:47 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/20 15:42:21 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/28 10:11:37 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class DiamondTrap : public ScavTrap, public FragTrap
 		DiamondTrap(const std::string& name);
 		DiamondTrap(const DiamondTrap& cpy);
 		DiamondTrap&	operator=(const DiamondTrap& cpy);
-		~DiamondTrap(void) override;
+		~DiamondTrap(void);
 
 		void	whoAmI(void);
 

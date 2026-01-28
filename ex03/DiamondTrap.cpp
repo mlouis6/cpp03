@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 12:51:54 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/26 16:44:25 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/28 09:50:01 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ DiamondTrap::DiamondTrap(void) : ClapTrap("unnamed_clap_name"), ScavTrap(), Frag
 	std::cout << "An unnamed DiamondTrap was created." << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name"), ScavTrap(), FragTrap(), _name(name)
+DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name), _name(name)
 {
 	_hp = FragTrap::_base_hp;
 	_energy = ScavTrap::_base_energy;
