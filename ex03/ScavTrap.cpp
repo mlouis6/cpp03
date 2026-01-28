@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:12:49 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/28 12:45:24 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/28 12:52:31 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	ScavTrap::guardGate(void)
 	}
 	if (_energy == 0)
 	{
-		std::cout << "ScavTrap " << _name << " had no energy to guard the gate." << std::endl;
+		std::cout << "ScavTrap " << _name << " has no energy to guard the gate." << std::endl;
 		return ;
 	}
 	std::cout << "ScavTrap " << _name << " is now the Gate keeper." << std::endl;

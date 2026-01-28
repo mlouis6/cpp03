@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 12:51:54 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/28 09:50:01 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/28 12:52:22 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,15 @@ DiamondTrap::~DiamondTrap(void)
 
 void	DiamondTrap::whoAmI(void)
 {
+	if (_hp == 0)
+	{
+		std::cout << "DiamongTrap " << _name << " can't talk due to being dead." << std::endl;
+		return ;
+	}
+	if (_energy == 0)
+	{
+		std::cout << "DiamongTrap " << _name << " has no energy left to talk." << std::endl;
+		return ;
+	}
 	std::cout << "I am " << _name << ", also known as " << ClapTrap::_name << "." << std::endl;
 }
