@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 10:11:46 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/28 12:52:31 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/28 12:54:34 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	FragTrap::highFivesGuys(void)
 	}
 	if (_energy == 0)
 	{
-		std::cout << "FragTrap " << _name << " has no energy to guard high five." << std::endl;
+		std::cout << "FragTrap " << _name << " has no energy to high five." << std::endl;
 		return ;
 	}
 	std::cout << "FragTrap " << _name << " wants to high five!" << std::endl;
