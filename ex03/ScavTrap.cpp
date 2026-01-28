@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:12:49 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/20 15:46:36 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/28 12:45:24 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 
 ScavTrap::ScavTrap(const ScavTrap& st) : ClapTrap(st)
 {
-	std::cout << "(st) Copy constructor of " << this->getName() << "." << std::endl;
+	std::cout << "(st) Copy constructor of " << this->_name << "." << std::endl;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& st)
@@ -44,13 +44,13 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& st)
 	{
 		ClapTrap::operator=(st);
 	}
-	std::cout << "(st) Copy assignement operator of " << this->getName() << "." << std::endl;
+	std::cout << "(st) Copy assignement operator of " << this->_name << "." << std::endl;
 	return (*this);
 }
 
 ScavTrap::~ScavTrap(void)
 {
-	std::cout << "ScavTrap " << this->getName() << " was destroyed." << std::endl;
+	std::cout << "ScavTrap " << _name << " was destroyed." << std::endl;
 }
 
 void	ScavTrap::attack(const std::string& target)
@@ -79,5 +79,10 @@ void	ScavTrap::guardGate(void)
 		std::cout << "ScavTrap " << _name << " is dead so it can't guard the gate." << std::endl;
 		return ;
 	}
-	std::cout << "ScavTrap " << this->getName() << " is now the Gate keeper." << std::endl;
+	if (_energy == 0)
+	{
+		std::cout << "ScavTrap " << _name << " had no energy to guard the gate." << std::endl;
+		return ;
+	}
+	std::cout << "ScavTrap " << _name << " is now the Gate keeper." << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 15:25:48 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/28 12:40:57 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/28 12:47:13 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,12 @@ int	main(void)
 		dt.guardGate();
 		dt.whoAmI();
 		dt.setEnergy(0);
+		dt.attack("Bad Guy");
+		std::cout << dt;
+		dt.highFivesGuys();
+		dt.guardGate();
+		dt.whoAmI();
+		dt.setHP(0);
 		dt.attack("Bad Guy");
 		std::cout << dt;
 		dt.highFivesGuys();

@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 10:11:46 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/28 12:38:27 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/28 12:45:03 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
 
 FragTrap::FragTrap(const FragTrap& cpy) : ClapTrap(cpy)
 {
-	std::cout << "(ft) Copy constructor of " << this->getName() << "." << std::endl;
+	std::cout << "(ft) Copy constructor of " << this->_name << "." << std::endl;
 }
 
 FragTrap&	FragTrap::operator=(const FragTrap& cpy)
@@ -45,7 +45,7 @@ FragTrap&	FragTrap::operator=(const FragTrap& cpy)
 	{
 		ClapTrap::operator=(cpy);
 	}
-	std::cout << "(ft) Copy assignement operator of " << this->getName() << "." << std::endl;
+	std::cout << "(ft) Copy assignement operator of " << this->_name << "." << std::endl;
 	return (*this);
 }
 
@@ -59,6 +59,11 @@ void	FragTrap::highFivesGuys(void)
 	if (_hp == 0)
 	{
 		std::cout << "FragTrap " << _name << " is dead so it can't high five." << std::endl;
+		return ;
+	}
+	if (_energy == 0)
+	{
+		std::cout << "FragTrap " << _name << " had no energy to guard high five." << std::endl;
 		return ;
 	}
 	std::cout << "FragTrap " << _name << " wants to high five!" << std::endl;
