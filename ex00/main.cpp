@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 15:25:48 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/19 16:06:09 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/28 09:31:24 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(void)
 	std::cout << ct;
 	ct.attack("Bad Guy");
 	std::cout << ct;
-	ct.takeDamage(5);
+	ct.takeDamage(6);
 	std::cout << ct;
 	ct.beRepaired(10);
 	std::cout << ct;

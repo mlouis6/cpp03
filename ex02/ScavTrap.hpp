@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:12:40 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/19 17:44:19 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/28 09:33:29 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ class ScavTrap : public ClapTrap
 		ScavTrap(const std::string& name);
 		ScavTrap(const ScavTrap& st);
 		ScavTrap& operator=(const ScavTrap& st);
-		~ScavTrap(void) override;
+		~ScavTrap(void);
 
-		void	attack(const std::string& target) override;
+		void	attack(const std::string& target);
 		void	guardGate(void);
 };
 

@@ -6,7 +6,7 @@
 /*   By: mlouis <mlouis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 10:52:03 by mlouis            #+#    #+#             */
-/*   Updated: 2026/01/19 16:06:45 by mlouis           ###   ########.fr       */
+/*   Updated: 2026/01/28 09:35:44 by mlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,6 +149,6 @@ void	ClapTrap::beRepaired(unsigned int amount)
 std::ostream& operator<<(std::ostream& os, const ClapTrap& ct)
 {
 	os << "------\nName: " << ct.getName() << "\nHP: " << ct.getHP() << "\nEnergy: " << ct.getEnergy()\
-		<< "\nDamage: " << ct.getDamage() << "\n------\n\n";
+		<< "\nDamage: " << ct.getDamage() << "\n------\n";
 	return (os);
 }
